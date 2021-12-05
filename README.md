@@ -1,4 +1,4 @@
 # pokemon_two
 Pokemon with React 
 
-© Adxell Arango 
+© 2021 Adxell Arango 
