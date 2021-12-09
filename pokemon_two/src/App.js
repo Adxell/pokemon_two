@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Pokemon from '../src/components/cardPokemon'
-import  {FontAwesomeIcon}  from "@fortawesome/react-fontawesome";
 function App() {
   const [pokemons, setPokemos]=useState([]);
   const [load, setLoad]=useState('https://pokeapi.co/api/v2/pokemon?limit=20');
@@ -13,14 +12,10 @@ function App() {
           const res= await fetch(`https://pokeapi.co/api/v2/pokemon/${result.name}`)
           const data = await res.json()
           setPokemos(list => [...list, data])
-          console.log(data);
       });
     }
     createPokeObject(data.results)
   }
-  console.log(load)
-
-  
   useEffect(()=>{
     getPokemons();
   },[])
@@ -28,12 +23,15 @@ function App() {
   return (
     <div className="cantainer">
       <div className="nav-main">
-        <FontAwesomeIcon icon={["fas", "coffee"]} />
         <h1>Pokemon</h1>
         <div className="link">
-        <a href="/">
-          <i className="fab fa-github"></i>
-        </a>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/Adxell/pokemon_two"
+          >
+            <i className="fab fa-github"></i>
+          </a>
         </div>
       </div>
       <div className="pokemon-container">
@@ -48,9 +46,11 @@ function App() {
             />
           ))}
         </div>
+        <div className="button">  
         <button className="load-more" onClick={() => getPokemons()}>
           Load More
         </button>
+        </div>
       </div>
     </div>
   );
