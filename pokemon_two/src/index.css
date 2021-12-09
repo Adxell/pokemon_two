@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 90vw;
+  width: 70vw;
   margin: auto;
 }
 
@@ -16,7 +16,7 @@ code {
 
 .all-container{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-row-gap:10px;
   grid-column-gap:30px ;
   margin: auto;
@@ -33,16 +33,135 @@ code {
 .fire{
   background-color: rgb(245, 154, 19);
 }
-
+.detail-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.detail-wrapper h3::first-letter{
+  text-transform: uppercase;
+}
+.detail-wrapper small{
+  margin-bottom: 15px;
+}
+.bug{
+  background-color: rgb(196, 171, 125);
+}
+.normal{
+  background-color: rgb(238, 235, 235);
+}
 .water{
   background-color: rgb(45, 225, 222);
 }
+.number{
+  background-color: transparent;
+}
+.grass{
+  background-color: rgb(38, 201, 52);
+}
+.nav-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-@media (max-width:360px){
+.nav-main .link i{
+  margin-right: 20px;
+  font-size: 25px;
+  color: #000;
+}
+
+@media (max-width:1240px){
+  body{
+    width: 90vw;
+  }
   .all-container{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
     width: 80%;
+    margin: auto;
+  }
+  .nav-main{
+    width: 72vw;
+    margin: auto;
+  }
+}
+
+@media (max-width:900px){
+  body{
+    width: 90vw;
+  }
+  .all-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    margin: auto;
+  }
+  .nav-main{
+    width: 72vw;
+    margin: auto;
+  }
+}
+
+@media (max-width:768px){
+  body{
+    width: 90vw;
+  }
+  .all-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: auto;
+  }
+  .nav-main{
+    width: 72vw;
+    margin: auto;
+  }
+}
+
+
+@media (max-width:560px){
+  body{
+    width: 90vw;
+  }
+  .all-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin: auto;
+  }
+  .nav-main{
+    width: 72vw;
+    margin: auto;
+  }
+}
+
+@media (max-width:375px){
+  body{
+    width: 100vw;
+  }
+  .all-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: auto;
+  }
+  .nav-main{
+    width: 72vw;
+    margin: auto;
+  }
+}
+@media (max-width:360px){
+  body{
+    width: 100vw;
+  }
+  .all-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    margin: auto;
+  }
+  .nav-main{
+    width: 72vw;
     margin: auto;
   }
 }
