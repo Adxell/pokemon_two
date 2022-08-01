@@ -16,6 +16,7 @@ function App() {
     }
     createPokeObject(data.results)
   }
+  console.log('this is a test for commit')
   useEffect(()=>{
     getPokemons();
   },[])
