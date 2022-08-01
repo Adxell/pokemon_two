@@ -14,12 +14,14 @@ function App() {
           setPokemos(list => [...list, data])
       });
     }
+    console.log('this is another test for revert commit ')
     createPokeObject(data.results)
   }
   useEffect(()=>{
     getPokemons();
   },[])
-
+  
+  console.log('this is another test for revert commit ')
   return (
     <div className="cantainer">
       <div className="nav-main">
