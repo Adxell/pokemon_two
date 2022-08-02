@@ -24,7 +24,6 @@ function App() {
   return (
     <div className="cantainer">
       <div className="nav-main">
-        <h1>Pokemon</h1>
         <div className="link">
           <a
             target="_blank"
