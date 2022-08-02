@@ -20,6 +20,7 @@ function App() {
     getPokemons();
   },[])
   console.log("Prueba revert 1")
+  console.log("Prueba revert 2")
   return (
     <div className="cantainer">
       <div className="nav-main">
