@@ -19,7 +19,7 @@ function App() {
   useEffect(()=>{
     getPokemons();
   },[])
-
+  console.log("Prueba de revert")
   return (
     <div className="cantainer">
       <div className="nav-main">
